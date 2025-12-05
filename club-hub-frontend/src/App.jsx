@@ -8,6 +8,10 @@ import Home from "./pages/Home/Home";
 import Clubs from "./pages/Clubs/Clubs";
 import ClubDetails from "./pages/Clubs/ClubDetails";
 
+/* New Department Pages */
+import Departments from "./pages/Departments/Departments";
+import DepartmentDetails from "./pages/Departments/DepartmentDetails";
+
 export default function App() {
   return (
     <BrowserRouter>
@@ -19,9 +23,11 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/clubs" element={<Clubs />} />
-
-          {/* Dynamic Club Details Page */}
           <Route path="/clubs/:id" element={<ClubDetails />} />
+
+          {/* 👉 Add these new department routes here */}
+          <Route path="/departments" element={<Departments />} />
+          <Route path="/departments/:id" element={<DepartmentDetails />} />
         </Routes>
       </div>
 
